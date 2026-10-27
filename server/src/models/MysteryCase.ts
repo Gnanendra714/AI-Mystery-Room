@@ -1,0 +1,3 @@
+import mongoose, { Schema } from 'mongoose';
+const caseSchema = new Schema({ caseCode:{type:String,unique:true,index:true}, title:String,difficulty:String,theme:String,premise:String,briefing:String,setting:String,incident:String,suspects:[Schema.Types.Mixed],evidence:[Schema.Types.Mixed],timeline:[Schema.Types.Mixed],solution:{type:Schema.Types.Mixed,required:true},generationVersion:String,providerModel:String,status:{type:String,default:'ready'} },{timestamps:true});
+export const MysteryCase: mongoose.Model<any> = mongoose.models.MysteryCase as mongoose.Model<any> ?? mongoose.model<any>('MysteryCase',caseSchema);
