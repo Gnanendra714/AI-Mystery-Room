@@ -33,7 +33,7 @@ Cases and attempts remain stored until manually removed in local MongoDB. Set a 
 
 ## Deployment
 
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for a Render + MongoDB Atlas + Gemini deployment walkthrough. A Render Blueprint is included in `render.yaml`.
+See [GITHUB_PAGES.md](./GITHUB_PAGES.md) to publish the frontend at the project GitHub Pages URL. Deploy the API with the Render + MongoDB Atlas + Gemini walkthrough in [DEPLOYMENT.md](./DEPLOYMENT.md). The Render Blueprint is in `render.yaml`.
 
 ## Milestones
 

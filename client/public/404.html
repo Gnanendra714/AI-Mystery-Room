@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opening case file…</title>
+  </head>
+  <body>
+    <p>Opening the case file…</p>
+    <script>
+      const siteBase = '/AI-Mystery-Room/';
+      const currentPath = window.location.pathname;
+      const isClientRoute = currentPath.startsWith(siteBase)
+        && currentPath !== siteBase
+        && !/\.[a-z0-9]+$/i.test(currentPath.slice(siteBase.length));
+      if (isClientRoute) {
+        sessionStorage.setItem('gh-pages-route', `${currentPath}${window.location.search}${window.location.hash}`);
+      }
+      window.location.replace(siteBase);
+    </script>
+  </body>
+</html>
